@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!--idioma espaniol-->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio 1</title>
+    <style>
+        /* Reglas de estilo para el header */
+        nav {
+            background-color: aquamarine;
+            color: aquamarine;
+            text-align: center; /* Centra el contenido del header */
+            padding: 10px; /* Añade espacio alrededor del contenido del header */
+
+
+        }
+        header {
+            background-color: rgb(184, 184, 255); /* Color de fondo azul */
+            color: white; /* Color de texto blanco para contrastar con el fondo */
+            padding: 10px; /* Añade espacio alrededor del contenido del header */
+            text-align: center; /* Centra el contenido del header */
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        footer{
+            background-color: #2011e8;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        section, article {
+            padding: 20px;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Laboratorio 1</h1>
+        <h2>Nico Hood</h2>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#Preguntas">Preguntas</a></li>
+            <li><a href="#Ciclo de vida y desarollo de los sistemas de informacion">Ciclo de vida y desarrollo de los sistemas de informacion</a></li>
+        </ul>
+    </nav>
+    <section>
+    <h2>Quién soy</h2>
+    <p>Soy un chavo de 20 años ansioso por obtener todos los conocimientos necesarios para tener la libertad de crear cualquier cosa</p>
+
+    <h2>Aficiones y proyectos</h2>
+    <p>Acutalmente le estoy dedicando mucho tiempo a mi salud, juego futbol y voy al gimnasio 6 dias de la semana.<br>
+    Un proyecto a futuro que me gustaria impelentar es un sistema que sea como un nutriologo virtual complejo</p>
+    <!-- Contenido de la página -->
+    </section>
+    <hr>
+
+    <section id="Preguntas">
+        <h2>Sección de Preguntas</h2>
+        <h3>¿Cuál es la diferencia entre Internet y la World Wide Web?</h3>
+        <p>Internet es la infraestructura subyacente que permite la conexión y la comunicación entre dispositivos, mientras que la WWW es un servicio específico que utiliza Internet para proporcionar acceso a información en línea mediante hipervínculos. Internet es más amplio y abarca una variedad de servicios y tecnologías más allá de la WWW, como el correo electrónico, la transferencia de archivos, las redes privadas virtuales (VPN), las redes sociales y más.</p>
+        <h3>¿Cuáles son las partes de un URL?</h3>
+        <p>Esquema (Scheme): Indica el protocolo de comunicación que se utilizará para acceder al recurso, como "http://" o "https://".<br>
+
+            <br>Nombre de dominio (Domain Name): Identifica la ubicación del recurso en Internet e incluye el subdominio (opcional), el nombre de dominio y el dominio de nivel superior (TLD).<br>
+            
+            <br>Ruta (Path): Especifica la ubicación específica del recurso en el servidor.<br>
+            
+            <br>Parámetros (Query Parameters): Son pares de clave-valor utilizados para pasar información adicional al servidor. Se separan del resto del URL por un signo de interrogación "?" y los pares de clave-valor están separados por un signo de ampersand "&".<br>
+            
+            <br>Fragmento (Fragment): Especifica una ubicación específica dentro del recurso, como un identificador o un ancla. Se indica con un signo de numeral "#" seguido de un identificador.</p>
+        <h3>¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?</h3>
+        <p>Los métodos HTTP son acciones que indican al servidor qué operación se debe realizar en un recurso determinado.<br>
+        <br>GET: Se utiliza para solicitar datos de un recurso específico del servidor. Es el método más comúnmente utilizado en navegadores web cuando visitas una página o haces clic en un enlace. Los datos solicitados son devueltos en el cuerpo de la respuesta.<br>
+
+        <br>HEAD: Es similar a GET, pero el servidor solo devuelve encabezados de respuesta, sin el cuerpo del recurso. Se utiliza para obtener información sobre el recurso, como el tamaño o el tipo de contenido, sin descargar el recurso completo.<br>
+        
+        <br>POST: Se utiliza para enviar datos al servidor para que sean procesados, generalmente como parte de un formulario HTML o para realizar una acción que puede tener un efecto secundario, como crear un nuevo recurso en el servidor. Los datos enviados con POST se incluyen en el cuerpo de la solicitud HTTP.<br>
+        
+        <br>PUT: Se utiliza para enviar datos al servidor para que sean almacenados o actualizados en un recurso específico. PUT reemplaza completamente el contenido del recurso con los datos proporcionados en el cuerpo de la solicitud. Es útil para actualizar completamente un recurso existente.<br>
+        
+        <br>PATCH: Se utiliza para enviar datos al servidor para que sean parcialmente modificados o actualizados en un recurso específico. A diferencia de PUT, PATCH no reemplaza completamente el contenido del recurso, sino que solo modifica las partes específicas indicadas en el cuerpo de la solicitud.<br>
+        
+        <br>DELETE: Se utiliza para eliminar un recurso específico del servidor. Al enviar una solicitud DELETE, el servidor eliminará el recurso indicado en la URL de la solicitud. </p>
+        <h3>¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas tu usuario y contraseña en algún sitio? ¿Por qué?</h3>
+        <p>El método HTTP que se debe utilizar al enviar un formulario HTML, como uno donde ingreses tu usuario y contraseña en un sitio web, es el método POST. La razón principal es que el método POST se utiliza para enviar datos al servidor para su procesamiento, y en el caso de un formulario de inicio de sesión, los datos como el nombre de usuario y la contraseña deben enviarse al servidor de manera segura y no deben mostrarse en la URL ni en ningún otro lugar visible para el usuario.
+            El método POST envía los datos en el cuerpo de la solicitud, lo que proporciona una capa adicional de seguridad en comparación con el método GET, que coloca los datos en la URL.
+        </p>
+        <h3>¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un URL?</h3>
+        <p>Cuando se accede a una página a través de un URL en un navegador web, se utiliza el método HTTP GET de forma predeterminada. Este método se utiliza para solicitar datos de un recurso específico del servidor. Al ingresar una URL en la barra de direcciones del navegador y presionar Enter, el navegador envía una solicitud GET al servidor para recuperar la página web solicitada. El servidor luego responde con el contenido de la página, que el navegador interpreta y muestra al usuario. Este proceso es fundamental para la navegación web y es la forma más común en que se accede a páginas y recursos en Internet a través de los navegadores.</p>
+        <h3>Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto? ¿Ocurrió algún error?
+        </h3>
+        <p>Cuando un servidor web devuelve una respuesta HTTP con el código 200, significa que la solicitud se ha procesado correctamente y que el servidor ha enviado el recurso solicitado al cliente de manera exitosa. El código de estado 200 en HTTP se conoce como "OK" o "Éxito". Indica que la solicitud del cliente ha sido recibida, entendida y aceptada, y que el servidor ha respondido correctamente con el contenido solicitado.</p>
+        <h3>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 404? ¿Por qué?        </h3>
+        <p>Sí, es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 404. El error 404 indica que el recurso solicitado no fue encontrado en el servidor. Aunque puede haber varias razones para esto, como cambios en la estructura del sitio, enlaces rotos o recursos eliminados, es responsabilidad del desarrollador garantizar que el sitio esté disponible y funcione correctamente para los usuarios.</p>
+        <h3>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 500? ¿Por qué?
+        </h3>
+        <p>Sí, es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 500. El error 500, también conocido como "Error del servidor interno", indica que hubo un problema en el servidor que impidió que se procesara la solicitud del usuario correctamente. A diferencia de los errores 404, que generalmente se deben a recursos faltantes, los errores 500 son más graves y pueden deberse a problemas internos del servidor, como errores de programación, configuraciones incorrectas, problemas de permisos, entre otros.</p>
+        <h3>¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5 estén desaprobados.
+        </h3>
+        <p>Cuando un atributo HTML5 está "depreciado" o "desaprobado" (deprecated), significa que se considera obsoleto o que su uso ya no se recomienda, aunque aún es compatible con los navegadores web por razones de retrocompatibilidad. La recomendación es dejar de usar estos atributos y migrar a alternativas más modernas y estándares.<br>
+        <br>font: En HTML4, font se usaba para cambiar el tamaño, color y tipo de fuente del texto. En HTML5, se recomienda usar CSS para estilizar el texto en lugar de etiquetas de formato inline.<br>
+        <br>center: En HTML4, center se usaba para centrar el contenido dentro de un elemento. En HTML5, se recomienda usar CSS para el centrado en lugar de una etiqueta específica de HTML.</p>
+        <h3>¿Cuáles son las diferencias principales entre HTML 4 y HTML5?        </h3>
+        <p>HTML5 representa una evolución significativa sobre HTML 4 al introducir mejoras sustanciales en varios aspectos. Esto incluye una semántica mejorada con la incorporación de elementos semánticos como `header`, `footer` y `nav`, proporcionando una estructura más clara al contenido. Además, HTML5 ofrece compatibilidad nativa para multimedia a través de elementos como `audio` y `video`, simplificando la integración de contenido multimedia sin necesidad de complementos externos. También se mejoran los formularios con nuevos tipos de entrada y validación nativa, y se introducen capacidades gráficas avanzadas mediante SVG y la etiqueta `canvas`. Con la adición de nuevas APIs y funcionalidades, como la API de geolocalización y almacenamiento web, HTML5 permite desarrollar aplicaciones web más sofisticadas. Además, HTML5 incluye características que mejoran la accesibilidad y optimizan el SEO del sitio, lo que contribuye a una experiencia de usuario más rica y una mejor visibilidad en los motores de búsqueda.</p>
+        <h3>¿Qué componentes de estructura y estilo tiene una tabla?</h3>
+        <p> table: Es el elemento contenedor principal que define la tabla en HTML.<br>
+            <br>thead: Representa la fila o filas de encabezado de una tabla.<br>
+            <br>tbody: Representa el cuerpo de una tabla, que contiene las filas de datos.<br>
+            <br>tfoot: Representa el pie de una tabla, que puede contener resúmenes o totales de los datos.<br>
+            <br>Además de estos elementos principales, una tabla puede contener elementos de fila y celda:<br>
+
+            <br>tr: Representa una fila de la tabla.<br>
+            <br>th: Representa una celda de encabezado de tabla, que se utiliza para etiquetar las columnas o filas.<br>
+            <br>td: Representa una celda de datos de tabla, que contiene el contenido real de la tabla.</p>
+        
+        <h3>¿Cuáles son los principales controles de una forma HTML5?</h3>
+        <p> input: Es el elemento más versátil y se utiliza para crear diversos tipos de campos de entrada, como texto, contraseña, correo electrónico, número, fecha, etc.<br>
+            <br>textarea: Permite a los usuarios ingresar texto multilínea.<br>
+            <br>select: Crea un menú desplegable para que los usuarios seleccionen una opción de una lista de opciones.<br>
+            <br>button: Crea un botón que puede usarse para enviar un formulario o realizar otras acciones específicas.<br>
+            <br>label: Se utiliza para asociar un texto descriptivo con un campo de formulario, lo que mejora la accesibilidad y la usabilidad del formulario.<br>
+            <br>fieldset y legend: Permiten agrupar varios campos de formulario relacionados y proporcionar una etiqueta descriptiva para el grupo.<br>
+            <br>input type="radio": Permite a los usuarios seleccionar una opción de un conjunto de opciones exclusivas.<br>
+            <br>input type="checkbox": Permite a los usuarios seleccionar una o varias opciones de un conjunto de opciones.<br>
+            <br>input type="file": Crea un campo de entrada para que los usuarios carguen archivos desde su dispositivo.<br>
+            <br>input type="submit" y input type="reset": Crean botones para enviar o restablecer un formulario, respectivamente.</p>
+        <h3>¿Qué tanto soporte HTML5 tiene el navegador que utilizas?</h3>
+        <p>El navegador que estoy utilizando es Chrome, el cual de acuerdo a HTML5test obtiene un puntaje de 538 de 571</p>
+
+    </section>
+
+    <hr>
+
+    <section id="Ciclo de vida y desarollo de los sistemas de informacion">
+        <h4>Sobre el ciclo de vida y desarrollo de los sistemas de información:
+        </h4>
+        <h3>¿Cuál es el ciclo de vida de los sistemas de información?</h3>
+        <p>El ciclo de vida de los sistemas de información (SDLC, por sus siglas en inglés) es un modelo que describe las diferentes etapas que un sistema de información atraviesa desde su concepción hasta su retirada. Aunque puede variar según la metodología específica utilizada y las necesidades del proyecto, las etapas típicas del ciclo de vida de los sistemas de información incluyen:<br>
+
+            <br>Identificación de necesidades y oportunidades: Se identifican los problemas o las oportunidades que podrían resolverse mediante la implementación de un sistema de información.<br>         
+            <br>Análisis de requisitos: Se recopilan y analizan los requisitos del sistema de información, incluidos los requisitos funcionales y no funcionales.<br>           
+            <br>Diseño del sistema: Se diseña la arquitectura del sistema, definiendo la estructura, los componentes y la interfaz del sistema de información.<br>
+            <br>Desarrollo o implementación: Se construye o desarrolla el sistema de información según los requisitos y el diseño previamente establecidos.<br>
+            <br>Pruebas y validación: Se realizan pruebas para garantizar que el sistema funcione según lo esperado y cumpla con los requisitos establecidos. Esto incluye pruebas unitarias, de integración y de sistema.<br>
+            <br>Implementación y puesta en marcha: Se implementa el sistema en el entorno de producción y se pone en funcionamiento para su uso por parte de los usuarios finales.<br>
+            <br>Mantenimiento y actualización: Se proporciona soporte continuo, se realizan correcciones de errores y se realizan actualizaciones periódicas para mantener el sistema en funcionamiento y satisfacer las necesidades cambiantes de los usuarios.<br>
+            <br>Retirada o desuso: En esta etapa, el sistema se retira o se desactiva, ya sea porque ha sido reemplazado por un sistema nuevo o porque ya no es necesario.</p>
+        <h3>¿Cuál es el ciclo de desarrollo de sistemas de información?</h3>
+        <p>
+            El ciclo de desarrollo de sistemas de información (ISD, por sus siglas en inglés) se centra específicamente en el proceso de construir un sistema de información durante la fase de desarrollo del ciclo de vida del sistema. A menudo se basa en metodologías específicas de desarrollo de software, como el modelo en cascada, el modelo en espiral, la metodología ágil, entre otras. El ciclo de desarrollo de sistemas de información suele incluir etapas como:<br>
+            <br>Requisitos: Recopilación y análisis de requisitos del sistema.<br>
+            <br>Diseño: Diseño arquitectónico y detallado del sistema.<br>
+            <br>Implementación: Desarrollo y codificación del sistema.<br>
+            <br>Pruebas: Pruebas unitarias, de integración y de sistema para asegurar la calidad del sistema.<br>
+            <br>Implementación: Despliegue del sistema en el entorno de producción.<br>
+            <br>Mantenimiento: Soporte continuo, correcciones de errores y actualizaciones del sistema.
+        </p>
+    </section>
+    <form>
+        <label for="color">Color:</label>
+        <input type="color" id="color" name="color">
+        
+    </form>
+    <script>
+        // Seleccionar el input de tipo color
+        const colorInput = document.getElementById('color');
+
+        // Añadir un event listener para detectar cambios en el color seleccionado
+        colorInput.addEventListener('input', function(){
+            // Obtener el valor del color seleccionado
+            const selectedColor = colorInput.value;
+            
+            // Cambiar el color de fondo de la página
+            document.body.style.backgroundColor = selectedColor;
+        });
+    </script>
+    <footer>
+        <p><br>&copy; 2024<br>Nicolas Hood Figueroa A01705857.<br>A01705857@tec.mx<br> Todos los derechos reservados. </p>
+    </footer>
+</body>
+</html>
