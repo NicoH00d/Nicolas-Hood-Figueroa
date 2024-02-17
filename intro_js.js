@@ -43,3 +43,32 @@ let accion =()=>{
 
 accion();
 
+//arreglos
+const arreglo = ["elemento"]; // a pesar de ser CONST, 
+//se puede modificar agregando elementos al arreglo debido a que el elemento tiene una localidad de memoria fija
+//o
+const arreglo2 = new Array();
+
+arreglo.push("otro elemento");
+console.log(arreglo);
+
+arreglo[10] = "uno mas"; //js llena de espacios vacios hasta el numero que quieres q haya el nuevo elemento
+console.log(arreglo);
+arreglo["dos"] = 2; //crea una localidad llamada "dos" y le asigna un 2
+
+//recorridos alternativos
+for(let valor of arreglo){
+    console.log(valor);
+}//elementos del arreglop
+for(let indice in arreglo){
+    console.log(indice);
+}//indices en el arreglo
+
+//objetos
+
+const objeto = {atributo1: "valor 1", atrubito2: "valor 2"};
+objeto.atributo3 = 2;
+console.log(objeto);
+
+//modificar html
+document.write("hola");
