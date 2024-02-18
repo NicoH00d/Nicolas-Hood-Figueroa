@@ -4,165 +4,196 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Laboratorio 4</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="estilos4.css" />
   </head>
   <body>
-    <h1>Laboratorio 4</h1>
-    <h3>
-      1. Entrada: un número pedido con un prompt. Salida: Una tabla con los
-      números del 1 al número dado con sus cuadrados y cubos.
-    </h3>
-    <button onclick="generarTabla()">Generar tabla</button>
-    <div id="tablaGenerada"></div>
-    <!-- Aquí se insertará la tabla generada -->
-    <h3>
-      Entrada: Usando un prompt se pide el resultado de la suma de 2 números
-      generados de manera aleatoria. Salida: La página debe indicar si el
-      resultado fue correcto o incorrecto, y el tiempo que tardó el usuario en
-      escribir la respuesta.
-    </h3>
-    <button onclick="randnum()">sumar</button>
-    <div id="respuesta"></div>
-    <!-- Aquí saldra la suma del usuario-->
-    <h3>
-      3. Función: contador. Parámetros: Un arreglo de números. Regresa: La
-      cantidad de números negativos en el arreglo, la cantidad de 0's, y la
-      cantidad de valores mayores a 0 en el arreglo.
-    </h3>
-    <p>Ingresa los números separados por comas (,):</p>
-    <input type="text" id="numerosInput" />
-    <button onclick="contarNumeros()">Contar Números</button>
-    <div id="resultado"></div>
-    <h3>
-      4. Función: promedios. Parámetros: Un arreglo de arreglos de números.
-      Regresa: Un arreglo con los promedios de cada uno de los renglones de la
-      matriz.
-    </h3>
-    <p>Ingrese la cantidad de filas y columnas de la matriz:</p>
-    <input type="number" id="filasInput" placeholder="Filas" />
-    <input type="number" id="columnasInput" placeholder="Columnas" />
-    <button onclick="crearCamposDeEntrada()">Crear Campos de Entrada</button>
-    <div id="matrizInput"></div>
-    <button onclick="calcularPromedios()">Calcular Promedios</button>
-    <div id="promedios"></div>
-    <h3>
-      5. Función: inverso. Parámetros: Un número. Regresa: El número con sus
-      dígitos en orden inverso.
-    </h3>
-    <input type="number" id="numeroInput" />
-    <button onclick="calcularInverso()">Calcular Inverso</button>
-    <div id="numeroreverso"></div>
+    <nav class="navbar navbar-degradado " role="navigation" aria-label="main navigation">
+      <div class="centrar ">
+        <h1><strong>Laboratorio 4</strong></h1>
+      </div>
+    
+      <a class="navbar-item" href="#Preguntas">Preguntas</a>
+      <a class="navbar-item" class="navbar-end" href="#materialdesign">Material Design</a>
+    </nav>
 
-    <h3>6. Juego del Gato</h3>
-    <table id="tablero">
-      <tr>
-        <td onclick="jugar(this)"></td>
-        <td onclick="jugar(this)"></td>
-        <td onclick="jugar(this)"></td>
-      </tr>
-      <tr>
-        <td onclick="jugar(this)"></td>
-        <td onclick="jugar(this)"></td>
-        <td onclick="jugar(this)"></td>
-      </tr>
-      <tr>
-        <td onclick="jugar(this)"></td>
-        <td onclick="jugar(this)"></td>
-        <td onclick="jugar(this)"></td>
-      </tr>
-    </table>
-    <div id="gameover"></div>
-    <button onclick="resetGame()">Reset Game</button>
+    <div class="content is-small container">
+      <h3>
+        1. Entrada: un número pedido con un prompt. Salida: Una tabla con los
+        números del 1 al número dado con sus cuadrados y cubos.
+      </h3>
+      <button class="button" onclick="generarTabla()">Generar tabla</button>
+      <div id="tablaGenerada"></div>
+      <!-- Aquí se insertará la tabla generada -->
+      <h3>
+        Entrada: Usando un prompt se pide el resultado de la suma de 2 números
+        generados de manera aleatoria. Salida: La página debe indicar si el
+        resultado fue correcto o incorrecto, y el tiempo que tardó el usuario en
+        escribir la respuesta.
+      </h3>
+      <button class="button" onclick="randnum()">sumar</button>
+      <div id="respuesta"></div>
+      <!-- Aquí saldra la suma del usuario-->
+      <h3>
+        3. Función: contador. Parámetros: Un arreglo de números. Regresa: La
+        cantidad de números negativos en el arreglo, la cantidad de 0's, y la
+        cantidad de valores mayores a 0 en el arreglo.
+      </h3>
+      <p>Ingresa los números separados por comas (,):</p>
+      <input type="text" id="numerosInput" />
+      <button class="button" onclick="contarNumeros()">Contar Números</button>
+      <div id="resultado"></div>
+      <h3>
+        4. Función: promedios. Parámetros: Un arreglo de arreglos de números.
+        Regresa: Un arreglo con los promedios de cada uno de los renglones de la
+        matriz.
+      </h3>
+      <p>Ingrese la cantidad de filas y columnas de la matriz:</p>
+      <input type="number" id="filasInput" placeholder="Filas" />
+      <input type="number" id="columnasInput" placeholder="Columnas" />
+      <button class="button" onclick="crearCamposDeEntrada()">Crear Campos de Entrada</button>
+      <div id="matrizInput"></div>
+      <button class="button" onclick="calcularPromedios()">Calcular Promedios</button>
+      <div id="promedios"></div>
+      <h3>
+        5. Función: inverso. Parámetros: Un número. Regresa: El número con sus
+        dígitos en orden inverso.
+      </h3>
+      <input type="number" id="numeroInput" />
+      <button class="button" onclick="calcularInverso()">Calcular Inverso</button>
+      <div id="numeroreverso"></div>
+    </div>
+    <div class= "content is-small container">
+      <h3>6. Juego del Gato</h3>
+    </div>
+      <div class="centrar">
+        <table id="tablero">
+          <tr>
+            <td onclick="jugar(this)"></td>
+            <td onclick="jugar(this)"></td>
+            <td onclick="jugar(this)"></td>
+          </tr>
+          <tr>
+            <td onclick="jugar(this)"></td>
+            <td onclick="jugar(this)"></td>
+            <td onclick="jugar(this)"></td>
+          </tr>
+          <tr>
+            <td onclick="jugar(this)"></td>
+            <td onclick="jugar(this)"></td>
+            <td onclick="jugar(this)"></td>
+          </tr>
+        </table>
+      <div id="gameover"></div>
+      <button class="button" onclick="resetGame()">Reset Game</button>
+    </div>
+    <hr>
+    <div class="content container">
+      <section id="Preguntas">
+        <h1>Seccion de preguntas</h1>
+        <h2>¿Qué diferencias y semejanzas hay entre Java y JavaScript?</h2>
+        <h3>Diferencias:</h3>
+        <p>
+          Origen y Propósito: Java es para aplicaciones empresariales, mientras que
+          JavaScript es para agregar interactividad a páginas web.<br />
+          <br />Ejecución: Java es compilado y ejecutado en una máquina virtual,
+          mientras que JavaScript es interpretado en el navegador.<br />
+          <br />Tipado: Java es fuertemente tipado y estático, mientras que
+          JavaScript es débilmente tipado y dinámico.<br />
+          <br />Sintaxis y Semántica: Java es más rígido y orientado a objetos,
+          mientras que JavaScript es más flexible y combina orientación a objetos
+          con programación funcional y prototípica.<br />
+          <br />Aplicaciones: Java es ampliamente utilizado en aplicaciones de
+          escritorio, móviles, empresariales y sistemas integrados, mientras que
+          JavaScript es para desarrollo web del lado del cliente y del servidor,
+          aplicaciones móviles híbridas y juegos.<br />
+        </p>
+        <h3>Similitudes:</h3>
+        <p>
+          Sintaxis Básica: Comparten algunas similitudes en la sintaxis básica.<br />
+          <br />Ecosistema: Ambos tienen un ecosistema amplio y activo de
+          herramientas y bibliotecas.<br />
+          <br />Programación Orientada a Objetos: Ambos admiten la programación
+          orientada a objetos.<br />
+          <br />vent-Driven: Ambos son compatibles con la programación orientada a
+          eventos para crear aplicaciones interactivas.
+        </p>
+        <h2>¿Qué métodos tiene el objeto Date? (Menciona al menos 5*)</h2>
+        <p>
+          El objeto <strong>Date</strong> en JavaScript proporciona varios métodos
+          para trabajar con fechas y horas. Aquí hay al menos cinco de los métodos
+          más comunes:<br />
+          <br />getDate(): Devuelve el día del mes (del 1 al 31) para la fecha
+          especificada.<br />
+          <br />getMonth(): Devuelve el mes (del 0 al 11) para la fecha
+          especificada.<br />
+          <br />getFullYear(): Devuelve el año (como un número de cuatro dígitos)
+          para la fecha especificada.<br />
+          <br />getHours(): Devuelve la hora (0-23) para la fecha especificada.<br />
+          <br />getMinutes(): Devuelve los minutos (0-59) para la fecha
+          especificada.
+        </p>
+        <h2>¿Qué métodos tienen los arreglos? (Menciona al menos 5*)</h2>
+        <p>
+          push(): Este método agrega uno o más elementos al final de un array y
+          devuelve la nueva longitud del array.<br />
 
-    <h1>Seccion de preguntas</h1>
-    <h2>¿Qué diferencias y semejanzas hay entre Java y JavaScript?</h2>
-    <h3>Diferencias:</h3>
-    <p>
-      Origen y Propósito: Java es para aplicaciones empresariales, mientras que
-      JavaScript es para agregar interactividad a páginas web.<br />
-      <br />Ejecución: Java es compilado y ejecutado en una máquina virtual,
-      mientras que JavaScript es interpretado en el navegador.<br />
-      <br />Tipado: Java es fuertemente tipado y estático, mientras que
-      JavaScript es débilmente tipado y dinámico.<br />
-      <br />Sintaxis y Semántica: Java es más rígido y orientado a objetos,
-      mientras que JavaScript es más flexible y combina orientación a objetos
-      con programación funcional y prototípica.<br />
-      <br />Aplicaciones: Java es ampliamente utilizado en aplicaciones de
-      escritorio, móviles, empresariales y sistemas integrados, mientras que
-      JavaScript es para desarrollo web del lado del cliente y del servidor,
-      aplicaciones móviles híbridas y juegos.<br />
-    </p>
-    <h3>Similitudes:</h3>
-    <p>
-      Sintaxis Básica: Comparten algunas similitudes en la sintaxis básica.<br />
-      <br />Ecosistema: Ambos tienen un ecosistema amplio y activo de
-      herramientas y bibliotecas.<br />
-      <br />Programación Orientada a Objetos: Ambos admiten la programación
-      orientada a objetos.<br />
-      <br />vent-Driven: Ambos son compatibles con la programación orientada a
-      eventos para crear aplicaciones interactivas.
-    </p>
-    <h2>¿Qué métodos tiene el objeto Date? (Menciona al menos 5*)</h2>
-    <p>
-      El objeto <strong>Date</strong> en JavaScript proporciona varios métodos
-      para trabajar con fechas y horas. Aquí hay al menos cinco de los métodos
-      más comunes:<br />
-      <br />getDate(): Devuelve el día del mes (del 1 al 31) para la fecha
-      especificada.<br />
-      <br />getMonth(): Devuelve el mes (del 0 al 11) para la fecha
-      especificada.<br />
-      <br />getFullYear(): Devuelve el año (como un número de cuatro dígitos)
-      para la fecha especificada.<br />
-      <br />getHours(): Devuelve la hora (0-23) para la fecha especificada.<br />
-      <br />getMinutes(): Devuelve los minutos (0-59) para la fecha
-      especificada.
-    </p>
-    <h2>¿Qué métodos tienen los arreglos? (Menciona al menos 5*)</h2>
-    <p>
-      push(): Este método agrega uno o más elementos al final de un array y
-      devuelve la nueva longitud del array.<br />
+          <br />pop(): El método pop() elimina el último elemento de un array y
+          devuelve ese elemento.<br />
 
-      <br />pop(): El método pop() elimina el último elemento de un array y
-      devuelve ese elemento.<br />
+          <br />splice(): Este método cambia el contenido de un array eliminando o
+          reemplazando elementos existentes y/o agregando nuevos elementos en su
+          lugar.<br />
 
-      <br />splice(): Este método cambia el contenido de un array eliminando o
-      reemplazando elementos existentes y/o agregando nuevos elementos en su
-      lugar.<br />
+          <br />slice(): slice() devuelve una copia superficial de una porción de un
+          array en un nuevo array.<br />
 
-      <br />slice(): slice() devuelve una copia superficial de una porción de un
-      array en un nuevo array.<br />
-
-      <br />indexOf(): Este método devuelve el primer índice en el que se
-      encuentra un elemento dado en el array, o -1 si no se encuentra.
-    </p>
-    <h2>
-      ¿Cómo se declara una variable con alcance local dentro de una función?
-    </h2>
-    <p>
-      Para declarar una variable con alcance local dentro de una función en
-      JavaScript, se utiliza la palabra clave <strong>let</strong> o
-      <strong>const</strong> seguida del nombre de la variable dentro del cuerpo
-      de la función. Las variables con alcance local son útiles para limitar la
-      visibilidad y el acceso a las variables dentro de un contexto específico,
-      en este caso, dentro de una función.
-    </p>
-    <h2>
-      ¿Qué implicaciones tiene utilizar variables globales dentro de funciones?
-    </h2>
-    <p>
-      Utilizar variables globales dentro de funciones puede tener implicaciones
-      significativas en la legibilidad, mantenibilidad y escalabilidad del
-      código. Las variables globales pueden aumentar el riesgo de colisión de
-      nombres, dificultar el seguimiento de cambios, introducir dependencias
-      ocultas, complicar las pruebas y dificultar la refactorización del código.
-      Para mitigar estos problemas, es recomendable minimizar el uso de
-      variables globales y en su lugar utilizar técnicas que limiten el alcance
-      de las variables, como pasar variables como argumentos de función o
-      utilizar patrones de diseño como el patrón de módulo para encapsular el
-      estado y la funcionalidad relacionados en un ámbito más limitado. Esto
-      puede mejorar la claridad, mantenibilidad y extensibilidad del código a lo
-      largo del tiempo.
-    </p>
+          <br />indexOf(): Este método devuelve el primer índice en el que se
+          encuentra un elemento dado en el array, o -1 si no se encuentra.
+        </p>
+        <h2>
+          ¿Cómo se declara una variable con alcance local dentro de una función?
+        </h2>
+        <p>
+          Para declarar una variable con alcance local dentro de una función en
+          JavaScript, se utiliza la palabra clave <strong>let</strong> o
+          <strong>const</strong> seguida del nombre de la variable dentro del cuerpo
+          de la función. Las variables con alcance local son útiles para limitar la
+          visibilidad y el acceso a las variables dentro de un contexto específico,
+          en este caso, dentro de una función.
+        </p>
+        <h2>
+          ¿Qué implicaciones tiene utilizar variables globales dentro de funciones?
+        </h2>
+        <p>
+          Utilizar variables globales dentro de funciones puede tener implicaciones
+          significativas en la legibilidad, mantenibilidad y escalabilidad del
+          código. Las variables globales pueden aumentar el riesgo de colisión de
+          nombres, dificultar el seguimiento de cambios, introducir dependencias
+          ocultas, complicar las pruebas y dificultar la refactorización del código.
+          Para mitigar estos problemas, es recomendable minimizar el uso de
+          variables globales y en su lugar utilizar técnicas que limiten el alcance
+          de las variables, como pasar variables como argumentos de función o
+          utilizar patrones de diseño como el patrón de módulo para encapsular el
+          estado y la funcionalidad relacionados en un ámbito más limitado. Esto
+          puede mejorar la claridad, mantenibilidad y extensibilidad del código a lo
+          largo del tiempo.<br>
+        </p>
+        <hr>
+      </section>
+      <section id="materialdesign">
+        <h1>¿Qué es material design?</h1>
+        Material Design es un conjunto de principios de diseño desarrollados por Google que se centran en la creación de interfaces de usuario claras, intuitivas y consistentes para aplicaciones y sitios web. Este enfoque de diseño se basa en la idea de que el diseño debe ser inspirado por el mundo físico y debe reflejar la experiencia táctil del usuario.<br>
+        <br>Los principios clave de Material Design incluyen el uso de elementos visuales como sombras, iluminación y profundidad para crear una sensación de profundidad en las interfaces, así como la utilización de colores audaces y vibrantes, tipografía legible y animaciones fluidas para mejorar la experiencia del usuario. Además, Material Design promueve la consistencia en el diseño a través de diferentes dispositivos y plataformas, lo que ayuda a los usuarios a sentirse familiarizados y cómodos al interactuar con diferentes aplicaciones y sitios web.
+      </section>
+    </div>
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <strong>&copy;Nico Hood</strong> ITESM Desarrollo de software 2024
+        </p>
+      </div>
+    </footer>
     <script src="lab4.js"></script>
   </body>
 </html>
