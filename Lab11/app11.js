@@ -12,7 +12,7 @@ app.use((request, response, next) => {
 
 const rutasClases = require('./routes/clases.routes');
 const rutasGatos = require('./routes/cats.routes');
-app.use(rutasGatos);
+app.use('/gatos', rutasGatos);
 app.use(rutasClases);
 
 

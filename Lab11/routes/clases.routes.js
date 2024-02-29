@@ -200,7 +200,7 @@ const html_header =`
               <a class="navbar-item" href="/nombre">
               Dinos tu nombre
             </a>
-            <a class="navbar-item" href="/sorpresa">
+            <a class="navbar-item" href="/gatos/sorpresa">
             que es esto?
           </a>
               </div>
