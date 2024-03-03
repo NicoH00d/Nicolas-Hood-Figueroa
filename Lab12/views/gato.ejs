@@ -1,0 +1,28 @@
+<%- include('includes/head.ejs') %>
+  <div class="centrar">
+    <br><br>
+    <table id="tablero">
+      <tr>
+        <td onclick="jugar(this)"></td>
+        <td onclick="jugar(this)"></td>
+        <td onclick="jugar(this)"></td>
+      </tr>
+      <tr>
+        <td onclick="jugar(this)"></td>
+        <td onclick="jugar(this)"></td>
+        <td onclick="jugar(this)"></td>
+      </tr>
+      <tr>
+        <td onclick="jugar(this)"></td>
+        <td onclick="jugar(this)"></td>
+        <td onclick="jugar(this)"></td>
+      </tr>
+    </table>
+    <div id="gameover"></div>
+    <hr>
+    <button class="button1" onclick="resetGame()">Reset Game</button>
+  </div>
+  </div>
+  <hr>
+  <script src="gatoscript.js"></script>
+  <%- include('includes/foot.ejs') %>

@@ -1,0 +1,34 @@
+<%- include('includes/head.ejs') %>
+
+<style>
+    .intro{
+      text-align: justify;
+      margin: auto 200px ;
+    }
+    .gatoc{
+      display: grid;
+      place-items: center;
+    }
+    </style>
+    <div class="intro">
+    <h2 class="title">Este es mi laboratorio 12</h2>
+    <p>
+      En esta actividad instalaremos y exploraremos cómo generar HTML dinámico desde el back-end.
+   <br>
+    </p>
+    <br>
+    <div>
+      En el ecosistema de Node.js, hay varios motores de plantillas (templating engines) disponibles que permiten generar HTML dinámico a partir de datos. Algunos de los más populares son:
+      <br><br>
+      <strong>(anteriormente conocido como Jade):</strong> Pug es un motor de plantillas HTML altamente expresivo y conciso que simplifica la escritura de HTML. Utiliza una sintaxis de indentación significativa en lugar de etiquetas HTML estándar. Es muy popular en el mundo de Node.js.
+      <br><br>
+      <strong>EJS (Embedded JavaScript):</strong> EJS permite incrustar JavaScript dentro de tus archivos HTML para generar dinámicamente contenido. Es similar a escribir HTML estándar con algunas adiciones para la interpolación de datos.
+      <br><br>
+      <strong>Handlebars:</strong> Handlebars es un motor de plantillas que sigue el enfoque de "lógica mínima en las plantillas". Permite la creación de plantillas reutilizables y cuenta con una sintaxis clara y sencilla.
+      <br><br>
+      <strong>Nunjucks:</strong> Desarrollado por Mozilla, Nunjucks es una poderosa plantilla inspirada en Jin
+    </div>
+    <div class ="gatoc"><img src="https://ih1.redbubble.net/image.4717906699.9120/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.jpg" width="375" height="500"></div>
+    </div>
+    <br>
+    <%- include('includes/foot.ejs') %>

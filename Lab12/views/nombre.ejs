@@ -1,0 +1,19 @@
+<%- include('includes/head.ejs') %>
+
+    <h2>Datos Ingresados</h2>
+<div class="container">
+    <h2 class="title" style="color: rgb(255, 255, 255);">Dinos tu nombre</h2>
+    <form action="/nombre" method="POST">
+        <label for="dato"></label>
+        <input type="text" class="input" id="dato" name="dato"> <!-- Input para que el usuario ingrese su nombre -->
+        <button type="submit">Enviar</button>
+    </form>
+</div><br><br>
+    <!-- Renderiza el dato ingresado por el usuario -->
+    <% if (dato !== null && dato !== undefined) { %>
+        <p><div class ="divespecial"> Bienvenid@<br> <%= dato %></div></p>
+    <% } %>
+
+<br><br>
+<%- include('includes/foot.ejs') %>
+<!--proximo laboratorio anadir que se queden almacenados en una lista -->
