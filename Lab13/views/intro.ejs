@@ -1,0 +1,46 @@
+<%- include('includes/head.ejs') %>
+
+<style>
+    .intro{
+      text-align: justify;
+      margin: auto 200px ;
+    }
+    .gatoc{
+      display: grid;
+      place-items: center;
+    }
+    </style>
+    <div class="intro">
+    <h2 class="title">Este es mi laboratorio 13 (trata de gatos y futuramente de coches)</h2>
+    <p>
+      En esta actividad exploraremos el estilo arquitectónico Modelo-Vista-Controlador y lo implementaremos con node+express.
+   <br>
+    </p>
+    <br>
+    <div>
+      <h3>El estilo arquitectónico MVC (Modelo-Vista-Controlador) ofrece varios beneficios que ayudan a mejorar la estructura y la mantenibilidad de una aplicación.</h3>
+      <br>
+      <strong>Separación de preocupaciones:</strong> MVC separa los componentes del software en tres partes distintas: el Modelo, que maneja la lógica de negocio y los datos, la Vista, que maneja la presentación de la información al usuario, y el Controlador, que actúa como intermediario entre el Modelo y la Vista. Esta separación de preocupaciones facilita la comprensión del código y hace que sea más fácil de mantener y escalar.
+      <br><br>
+      <strong>Reutilización de código</strong> La separación de preocupaciones en MVC permite que cada componente (Modelo, Vista y Controlador) pueda ser desarrollado y probado de forma independiente. Esto facilita la reutilización del código en diferentes partes de la aplicación o incluso en diferentes aplicaciones.
+      <br><br>
+      <strong>Facilita el desarrollo en equipo:</strong> Al tener roles claramente definidos (desarrolladores de modelos, diseñadores de vistas, etc.), MVC facilita el trabajo en equipo. Cada miembro del equipo puede trabajar en su área específica sin interferir demasiado con el trabajo de los demás, siempre y cuando se sigan las interfaces definidas. 
+      <br><br>
+      <strong>Facilita el mantenimiento:</strong> Debido a la separación de preocupaciones y la estructura modularizada, realizar cambios en una parte de la aplicación es menos probable que afecte otras partes. Esto hace que sea más fácil realizar actualizaciones y correcciones de errores sin afectar negativamente al resto del sistema.
+      <br><br>
+      Aunque el estilo arquitectónico MVC tiene numerosos beneficios, también tiene algunas posibles desventajas:
+      <br>
+      <strong>Complejidad inicial:</strong> Para quienes son nuevos en MVC, puede ser un poco difícil comprender la estructura y las relaciones entre el Modelo, la Vista y el Controlador. Esto puede llevar a una curva de aprendizaje más pronunciada al principio.
+      <br><br>
+      <strong>Sobrecomplejidad en aplicaciones pequeñas:</strong> En aplicaciones pequeñas o simples, la implementación completa de MVC puede resultar excesiva y complicada. Agregar una estructura MVC completa podría ser innecesario y aumentar la complejidad de la aplicación sin proporcionar beneficios significativos.
+      <br><br>
+      <strong>Potencial sobrecarga de controladores:</strong> En algunas implementaciones, los controladores pueden acumular una cantidad considerable de lógica de aplicación, lo que podría dificultar su mantenimiento y comprensión. Esto puede ocurrir si no se sigue correctamente el principio de "delgadez del controlador" y se permite que los controladores realicen demasiadas tareas.
+      <br><br>
+      <strong>Posible sobrecarga de archivos y estructura de carpetas:</strong> Dependiendo de la implementación y de la cantidad de modelos, vistas y controladores, la estructura de archivos y carpetas puede volverse compleja y difícil de navegar, lo que podría afectar la productividad del equipo.
+      <br><br>
+      A pesar de estas posibles desventajas, MVC sigue siendo un estilo arquitectónico muy utilizado y efectivo en muchos contextos de desarrollo de software. Sin embargo, es importante evaluar cuidadosamente si es la opción adecuada para un proyecto específico y adaptar su implementación según sea necesario para cumplir con los requisitos y las limitaciones del proyecto.
+    </div>
+    <div class ="gatoc"><img src="https://ih1.redbubble.net/image.4717906699.9120/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.jpg" width="375" height="500"></div>
+    </div>
+    <br>
+    <%- include('includes/foot.ejs') %>
