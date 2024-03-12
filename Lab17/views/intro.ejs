@@ -1,0 +1,25 @@
+<%- include('includes/head.ejs', {username: username}) %>
+    <div class="intro">
+    <h2 class="title">Este es mi laboratorio 17</h2>
+    <p>
+      En esta actividad comenzaremos con la interacción con una base de datos desde node.
+      <br>
+    </p>
+    <br>
+    <div>
+      <h3>Escribir código SQL únicamente en la capa del modelo presenta varias ventajas:
+        <br><br>
+      <strong>Abstracción de la base de datos:</strong> Permite separar la lógica de la base de datos del resto de la aplicación, lo que facilita la modificación y el mantenimiento del código.
+      <br><br>
+      <strong>Reutilización de código</strong>  Al tener consultas SQL encapsuladas en los modelos, se pueden reutilizar en diferentes partes de la aplicación sin tener que repetir el código.
+      <br><br>
+      <strong>Seguridad:</strong> Al evitar la escritura directa de consultas SQL en otras capas, se reduce el riesgo de ataques de inyección SQL y se mejora la seguridad de la aplicación.
+      <br><br>
+      <strong>Claridad y legibilidad:</strong> Al centralizar las consultas SQL en los modelos, el código se vuelve más claro y legible, facilitando la comprensión y el mantenimiento para otros desarrolladores.
+      <br><br>
+      <strong>Flexibilidad:</strong> Permite cambiar fácilmente entre diferentes sistemas de gestión de bases de datos sin afectar el resto de la aplicación, ya que solo se necesitaría actualizar la implementación del modelo.
+      </div>
+    <div class ="gatoc"><img src="https://ih1.redbubble.net/image.4717906699.9120/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.jpg" width="375" height="500"></div>
+    </div>
+    <br>
+    <%- include('includes/foot.ejs') %>

@@ -1,0 +1,16 @@
+<%- include('includes/head.ejs', {username: username}) %>
+
+<h2 class="title"><% if (registro) { %>¡Únete al clan!<% } else { %>Bienvenido<% } %></h2>
+<form action="/users/<% if (registro) { %>signup<% } else { %>login<% } %>" method="POST">
+    <label class="label" for="username">Nombre de usuario</label>
+    <input class="input text" id="username" name="username">
+    <% if (registro) { %>
+        <label class="label" for="name">Nombre completo</label>
+        <input class="input text" id="name" name="name">
+    <% } %>
+    <label class="label" for="password">Contraseña</label>
+    <input class="input text" type="password" id="password" name="password">
+    <br><br>
+    <input class="button is-success" type="submit" value="<% if (registro) { %>Regsitrar!<% } else { %>Entrar<% } %>">
+</form>
+<%- include('includes/foot.ejs') %>
