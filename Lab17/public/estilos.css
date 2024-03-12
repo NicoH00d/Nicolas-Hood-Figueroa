@@ -57,8 +57,8 @@
 .divespecial{
     margin: 0 450px;
     padding: 20px;
-    display:grid;
-    place-items:center;
+    display: grid;
+    place-items: center;
     border-radius: 28px;
     background: linear-gradient(225deg, #d5d5d5, #fefefe);
     box-shadow:  -22px 22px 44px #a8a8a8,
@@ -195,4 +195,7 @@
 .gatoc{
   display: grid;
   place-items: center;
+}
+.titulo {
+  font-family: "Helvetica Neue Thin", Arial, sans-serif; /* Utiliza Century Gothic como fuente principal, con Arial y fuentes sans-serif como respaldo */
 }

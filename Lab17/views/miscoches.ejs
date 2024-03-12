@@ -11,7 +11,7 @@
             <div class="card">
                 <div class="card-image">
                     <figure class="image is-4by3">
-                        <img id="imagen_carro" src="<%= coche.Imagen %>" alt="Imagen de <%= coche.Marca %>">
+                        <img id="imagen_carro" src="<%= coche.Imagen %>" alt="Imagen de <%=coche.Marca %>">
                     </figure>
                 </div>
                 <div class="card-content">
@@ -22,12 +22,12 @@
                             </figure>
                         </div>
                         <div class="media-content">
-                            <p class="title is-4"><%= coche.Marca %></p>
+                            <p class="title is-4"><a href="/coches<%= coche.id %>"><%= coche.Marca %></a></p>
                         </div>
                     </div>
                     <div class="content">
-                        Modelo: <span id="vida_barbaro"><%= coche.Modelo %></span> <br>
-                        Motor: <span id="ataque_barbaro"><%= coche.Motor %></span> <br> <br>
+                        Modelo: <span id="modelosas"><%= coche.Modelo %></span> <br>
+                        Motor: <span id="motorsas"><%= coche.Motor %></span> <br> <br>
                     </div>
                 </div>
             </div>
