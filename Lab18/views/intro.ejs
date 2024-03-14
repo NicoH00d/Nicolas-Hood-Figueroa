@@ -1,0 +1,33 @@
+<%- include('includes/head.ejs', {username: username}) %>
+    <div class="intro">
+    <h2 class="title">Este es mi laboratorio 18</h2>
+    <p>
+      En esta actividad exploraremos el proceso de autentificación de usuarios.
+      <br>
+    </p>
+    <br>
+    <div>
+      <h3>Escribir código SQL únicamente en la capa del modelo presenta varias ventajas:
+        <br><br>
+      La autenticación de usuarios en una página web es un proceso crucial que permite verificar la identidad de los usuarios que acceden a la aplicación. Esto se logra solicitando credenciales de autenticación, como un nombre de usuario y una contraseña, y luego comparándolos con los datos almacenados previamente en la base de datos del sistema.
+      <br><br>
+      La autenticación sirve para garantizar la seguridad y la privacidad de la información al restringir el acceso solo a usuarios autorizados. Al requerir que los usuarios se identifiquen, se evita que personas no autorizadas accedan a datos sensibles o realicen acciones no permitidas dentro del sistema.
+      <br><br>
+      Además de garantizar la seguridad, la autenticación también permite personalizar la experiencia del usuario. Una vez autenticado, el sistema puede proporcionar contenido relevante y funcionalidades específicas según el perfil y los permisos del usuario, lo que mejora la usabilidad y la satisfacción del usuario.
+     <br><br><br>
+     Aparte de Bcrypt y CSRF (Cross-Site Request Forgery), existen varias otras formas de autenticación que se utilizan en el desarrollo web para garantizar la seguridad de las aplicaciones. Aquí tienes algunas de ellas:
+     <br>
+     Token de acceso (JWT): Utilizado para autenticar y autorizar usuarios en aplicaciones web y APIs, permitiendo la transmisión segura de información entre partes mediante un objeto JSON firmado digitalmente.
+    <br><br>
+    OAuth: Protocolo de autorización para permitir que las aplicaciones accedan a cuentas de usuario en servicios HTTP de terceros sin compartir credenciales de acceso.
+    <br><br>
+    Autenticación basada en cookies: Utiliza cookies para mantener el estado de autenticación del usuario en el navegador, enviando una cookie con cada solicitud para verificar la autenticidad del usuario.
+    <br><br>
+    Autenticación de dos factores (2FA): Agrega una capa adicional de seguridad al requerir dos formas diferentes de identificación del usuario, como contraseña y un código generado por una aplicación.
+    <br><br>
+    Biometría: Utiliza características físicas únicas del individuo, como huellas dactilares o reconocimiento facial, para verificar su identidad. 
+    </div>
+    <div class ="gatoc"><img src="https://ih1.redbubble.net/image.4717906699.9120/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.jpg" width="375" height="500"></div>
+    </div>
+    <br>
+    <%- include('includes/foot.ejs') %>

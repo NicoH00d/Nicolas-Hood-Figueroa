@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="../login.css" />
+
+<body style="background-image: url('https://hips.hearstapps.com/hmg-prod/images/1991-ferrari-f40-103-1593201414.jpg');
+    background-size: cover;">
+<%- include('includes/head.ejs', {username: username}) %>
+
+  <br /><br />
+  <div style="margin: auto 200px">
+    <h2 class="title">
+      <% if (registro) { %>¡Únete al Equipo!<% } else { %>Bienvenido<% } %>
+    </h2>
+    <% if(error != '') { %>
+    <div class="notification is-danger">
+      <strong><%= error %></strong>
+    </div>
+    <% } %>
+    <div>
+      <form
+        action="/users/<% if (registro) { %>signup<% } else { %>login<% } %>"
+        method="POST"
+      >
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+
+        <div class="form__group field">
+          <input
+            class="form__field"
+            placeholder="username"
+            id="username"
+            name="username"
+            required=""
+          />
+          <label class="form__label" for="username">Nombre de usuario</label>
+        </div>
+        <% if (registro) { %>
+        <div class="form__group field">
+          <input
+            class="form__field"
+            placeholder="name"
+            id="name"
+            name="name"
+            required=""
+          />
+          <label class="form__label" for="name">Nombre completo</label>
+        </div>
+        <% } %>
+        <div class="form__group field">
+          <input
+            class="form__field"
+            placeholder="Contraseña"
+            type="password"
+            id="password"
+            name="password"
+          />
+          <label class="form__label" for="password">Contraseña</label>
+        </div>
+        <br /><br />
+        <div>
+          <button>
+            <% if (registro) { %>Registrate!<% } else { %>Entrar<% } %>
+          </button>
+        </div>
+      </form>
+    </div>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  </div>
+</body>
+
+<%- include('includes/foot.ejs') %>
