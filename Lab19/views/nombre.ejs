@@ -1,0 +1,37 @@
+<%- include('includes/head.ejs', {
+    username: username,
+    permisos: permisos,
+  }) %>
+<hr>
+<div class="container">
+    <h2 class="title" style="color: rgb(255, 255, 255);">Dinos tu nombre</h2>
+    <form action="/nombre" method="POST">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
+        <label for="dato"></label>
+        <input type="text" class="input" id="dato" name="dato"> <!-- Input para que el usuario ingrese su nombre -->
+        <button type="submit">Enviar</button>
+    </form>
+</div><br>
+    <!-- Renderiza el dato ingresado por el usuario -->
+    <% if (dato !== null && dato !== undefined) { %>
+        <p><div class ="divespecial"> Bienvenid@<br>
+            <div class="centrar"> <%= dato %></div></div>
+        </p>
+    <% } %>
+<br><br>
+
+
+<label class="centrar" class="label" id="ola" onchange="toggleDiv()">
+    <div class="toggle">
+        <input class="toggle-state" type="checkbox" name="check" value="check">
+        <div class="indicator"></div>
+    </div>
+  </label>
+<br>
+<div class="centrar">
+<div id="miDiv" style="display:none;">
+    <img src="https://media.tenor.com/aEziQUxvp18AAAAM/el-gato.gif"></div>
+</div>
+<script src="gatoscript.js"></script>
+<%- include('includes/foot.ejs') %>
+<!--proximo laboratorio anadir que se queden almacenados en una lista -->

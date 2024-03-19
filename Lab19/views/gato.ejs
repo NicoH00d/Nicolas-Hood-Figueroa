@@ -1,0 +1,35 @@
+<%- include('includes/head.ejs', {
+  username: username,
+  permisos: permisos,
+}) %>
+
+<br><Br>
+<div class="card1">
+
+    <br><br>
+    <table id="tablero">
+      <tr>
+        <td onclick="jugar(this)"></td>
+        <td onclick="jugar(this)"></td>
+        <td onclick="jugar(this)"></td>
+      </tr>
+      <tr>
+        <td onclick="jugar(this)"></td>
+        <td onclick="jugar(this)"></td>
+        <td onclick="jugar(this)"></td>
+      </tr>
+      <tr>
+        <td onclick="jugar(this)"></td>
+        <td onclick="jugar(this)"></td>
+        <td onclick="jugar(this)"></td>
+      </tr>
+    </table>
+    <div id="gameover" class = "centrar" style="color: white;"></div>
+    <br><br><br>
+</div>
+<br>
+<div class="centrar"><button class="button1" onclick="resetGame()">Reset Game</button></div>
+<br><br><br>
+<hr>
+  <script src="gatoscript.js"></script>
+  <%- include('includes/foot.ejs') %>

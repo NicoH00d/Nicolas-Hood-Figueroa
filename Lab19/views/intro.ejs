@@ -1,0 +1,47 @@
+<%- include('includes/head.ejs', {
+  username: username,
+  permisos: permisos,
+}) %>
+
+    <div class="intro">
+    <h1 class="title">Este es mi laboratorio 19</h1>
+
+    <p>
+      En esta actividad exploraremos el modelo usado como estándar internacional para el control de acceso basado en roles (RBAC), y lo aplicarás en aplicaciones web.
+      <br>
+    </p>
+    <p>
+      <br><br>
+      El Control de Acceso Basado en Roles (RBAC) es un modelo de seguridad que asigna permisos y autorizaciones dentro de una infraestructura informática basándose en roles definidos. Este modelo se distingue por agrupar derechos de acceso según roles específicos dentro de una organización, lo que puede variar según la empresa, haciendo referencia a departamentos, ubicaciones, centros de costes, o funciones de los empleados. Los roles definen qué acciones pueden realizar los usuarios, como leer, escribir o tener acceso completo a datos y aplicaciones empresariales. La implementación de RBAC implica un proceso que comienza con la definición detallada de los roles y autorizaciones, seguido por la asignación de roles a los empleados según sus tareas. Este modelo facilita la administración de permisos, especialmente en organizaciones grandes, ya que permite asignar autorizaciones de acceso de manera más eficiente y segura  
+    </p>
+    <br>
+    <p>
+      Un sistema que aplica RBAC podría ser el Directorio Activo de Microsoft, utilizado ampliamente en entornos corporativos. Este sistema permite a los administradores de TI asignar roles específicos a los usuarios, controlando su acceso a recursos y datos según las necesidades de su posición dentro de la organización.
+      <br><br>
+      Por otro lado, un sistema que no aplica RBAC podría ser un sistema de gestión de archivos simple que utiliza Listas de Control de Acceso (ACL) para la gestión de permisos. En este caso, los permisos se asignan a nivel individual o por dirección IP, sin agruparlos bajo roles definidos. Un ejemplo de este enfoque es el sistema de archivos de Windows, donde los usuarios y administradores definen ACL individuales para cada objeto, como documentos o carpetas  
+    </p>
+    <br><br>
+<section>
+    <h2><strong>Ventajas de RBAC</strong><br></h2>
+    <ul>
+        <li><strong>Mejora de la seguridad:</strong> Limita el acceso a solo lo necesario para el desempeño de las funciones de un empleado, reduciendo el riesgo de brechas de seguridad.</li>
+        <li><strong>Compatible con iniciativas de conformidad:</strong> Facilita el cumplimiento de regulaciones controlando el acceso a información sensible.</li>
+        <li><strong>Reducción de costes y esfuerzos administrativos:</strong> Simplifica la gestión de permisos al asignar roles predefinidos, agilizando la incorporación o baja de empleados.</li>
+      </ul>
+</section>
+<br>
+<section>
+    <h2><strong>Desventajas de RBAC</strong><br></h2>
+    <ul>
+        <li><strong>La creación de roles puede ser laboriosa:</strong> Requiere un esfuerzo significativo para establecer y mantener los roles adecuados, especialmente en grandes organizaciones.</li>
+        <li><strong>Menos flexibilidad para asignaciones temporales:</strong> Ajustar permisos para necesidades temporales puede ser complicado y propenso a errores.</li>
+        <li><strong>Mayor complejidad en pequeñas empresas:</strong> Para empresas con pocos empleados o roles, RBAC puede resultar más costoso y complejo de lo necesario.</li>
+    </ul>
+    <div>
+    <br><br>
+
+    </div>
+    <div class ="gatoc"><img src="https://ih1.redbubble.net/image.4717906699.9120/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.jpg" width="375" height="500"></div>
+    </div>
+    <br>
+    <%- include('includes/foot.ejs') %>
