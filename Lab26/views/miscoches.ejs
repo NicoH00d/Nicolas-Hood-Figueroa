@@ -1,0 +1,43 @@
+<%- include('includes/head.ejs', {
+    username: username,
+    permisos: permisos,
+}) %>
+
+<div class="centrar" ><h1 class="title">Mis coches</h1></div><br><br>
+<div class="columns is-multiline">
+    <% let contador = 0; %>
+    <% for (let coche of coches) { %>
+        <% if (contador % 4 === 0) { %>
+            </div><div class="columns is-multiline">
+        <% } %>
+        <div class="column">
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img id="imagen_carro" src="/uploads/<%= coche.Imagen %>" alt="Imagen de <%=coche.Marca %>">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-left">
+                            <figure class="image is-48x48">
+                                <img src="/uploads/<%= coche.Imagen %>">
+                            </figure>
+                        </div>
+                        <div class="media-content">
+                            <p class="title is-4"><a href="/coches<%= coche.id %>"><%= coche.Marca %></a></p>
+                        </div>
+                    </div>
+                    <div class="content">
+                        Modelo: <span id="modelosas"><%= coche.Modelo %></span> <br>
+                        Motor: <span id="motorsas"><%= coche.Motor %></span> <br> <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% contador++; %>
+    <% } %>
+</div>
+
+<br><br>
+<%- include('includes/foot.ejs') %>

@@ -1,0 +1,82 @@
+<%- include('includes/head.ejs', {
+    username: username,
+    permisos: permisos,
+  }) %>
+<hr>
+<div class="container">
+    <h2 class="title" style="color: rgb(255, 255, 255);">Dinos tu nombre</h2>
+    <form action="/nombre" method="POST">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
+        <label for="dato"></label>
+        <input type="text" class="input" id="dato" name="dato"> <!-- Input para que el usuario ingrese su nombre -->
+        <button type="submit">Enviar</button>
+    </form>
+</div><br>
+    <!-- Renderiza el dato ingresado por el usuario -->
+    <% if (dato !== null && dato !== undefined) { %>
+        <p><div class ="divespecial"> Bienvenid@<br>
+            <div class="centrar"> <%= dato %></div></div>
+        </p>
+    <% } %>
+<br><br>
+
+
+<label class="centrar" class="label" id="ola" onchange="toggleDiv()">
+    <div class="toggle">
+        <input class="toggle-state" type="checkbox" name="check" value="check">
+        <div class="indicator"></div>
+    </div>
+  </label>
+<br>
+<div class="centrar">
+<div id="miDiv" style="display:none;">
+    <img src="https://media.tenor.com/aEziQUxvp18AAAAM/el-gato.gif"></div>
+</div>
+
+<div class="centrar">
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3J5AgJ6ZHhgS4qTSUTrI2p?utm_source=generator" width="90%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+   </div>
+<Script>
+// Authorization token that must have been created previously. See : https://developer.spotify.com/documentation/web-api/concepts/authorization
+const token = '877df5345fd440ea83211f4065b75862';
+async function fetchWebApi(endpoint, method, body) {
+  const res = await fetch(`https://api.spotify.com/${endpoint}`, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+    method,
+    body:JSON.stringify(body)
+  });
+  return await res.json();
+}
+
+const tracksUri = [
+  'spotify:track:1I8tHoNBFTuoJAlh4hfVVE','spotify:track:5F2lWCeBZMxpo6SG1Q3PlL','spotify:track:5masKPHeAOVNgxdLebIcK7','spotify:track:4tQofG51E0juZBBVr6pral','spotify:track:7ucEkWU0SVy0XFdfXESgfY','spotify:track:2lmWwBLVJ2P0HX491zkYws','spotify:track:1ncGbGufa7aUaJ5zC4YP3y','spotify:track:69vlMrzHwATKzupwNcUPyK','spotify:track:73dabjAcAF06vA4C1o16ta','spotify:track:3CRDbSIZ4r5MsZ0YwxuEkn'
+];
+
+async function createPlaylist(tracksUri){
+  const { id: user_id } = await fetchWebApi('v1/me', 'GET')
+
+  const playlist = await fetchWebApi(
+    `v1/users/${user_id}/playlists`, 'POST', {
+      "name": "My recommendation playlist",
+      "description": "Playlist created by the tutorial on developer.spotify.com",
+      "public": false
+  })
+
+  await fetchWebApi(
+    `v1/playlists/${playlist.id}/tracks?uris=${tracksUri.join(',')}`,
+    'POST'
+  );
+
+  return playlist;
+}
+
+const createdPlaylist = await createPlaylist(tracksUri);
+console.log(createdPlaylist.name, createdPlaylist.id);
+
+</Script>
+
+<script src="gatoscript.js"></script>
+
+<%- include('includes/foot.ejs') %>

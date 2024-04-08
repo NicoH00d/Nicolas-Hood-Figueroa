@@ -1,0 +1,25 @@
+<%- include('includes/head.ejs', {
+    username: username,
+    permisos: permisos,
+}) %>
+
+<div class="titulo"><h2 class="title" style="color: rgb(0, 0, 0); padding: 20px 50px;">Usuarios</h2></div>
+<div class="column">
+    <% users.forEach(user => { %>
+        <div class="rows">
+            <div class="box" style="margin: 0 100px;">
+                <div><h2 class="subtitle" style="color: rgb(0, 0, 0);"><strong><%= user.username %></strong></h2></div>
+                <p><strong>Nombre completo:</strong> <%= user.nombre %></p>
+                <p><strong>Rol: </strong> <%= user.rol_nombre %></p>
+                <% if ( user.username == user.username) { %> <!--arreglar que los botones no aparezcan para el usuario de la sesion-->
+                    <div style="display: flex; justify-content: flex-end;">
+                        <button>Eliminar</button>&nbsp;&nbsp;
+                        <button>Modificar</button>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+        <br>    
+    <% }); %>
+</div>
+
